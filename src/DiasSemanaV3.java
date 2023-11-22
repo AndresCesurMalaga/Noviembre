@@ -4,7 +4,7 @@ public class DiasSemanaV3 {
 
 	public static void main(String[] args) {
 
-		// [L M X J V]
+		// [L M X J V S D]
 		dibujarDiasAño();
 	}
 
@@ -216,4 +216,5 @@ public class DiasSemanaV3 {
 			}
 		}
 	}
+
 }
