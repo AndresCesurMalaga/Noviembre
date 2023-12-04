@@ -1,3 +1,4 @@
+package programitas;
 
 public class DiasSemana {
 

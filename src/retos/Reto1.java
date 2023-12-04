@@ -1,3 +1,4 @@
+package retos;
 // Escribe un programa en Java que muestre los números del 10 al 1
 // Debes utilizar una estructura de tipo while ó do-while.
 

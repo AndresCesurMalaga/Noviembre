@@ -1,3 +1,4 @@
+package halloween;
 // Prototipo/idea para la actividad de halloween 
 
 import java.util.Scanner;

@@ -1,3 +1,4 @@
+package programitas;
 import java.util.Scanner;
 
 public class DiasSemanaV3 {

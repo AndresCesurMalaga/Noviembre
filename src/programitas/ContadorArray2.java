@@ -1,3 +1,4 @@
+package programitas;
 import java.util.Random;
 
 public class ContadorArray2 {

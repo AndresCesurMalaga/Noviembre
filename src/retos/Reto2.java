@@ -1,3 +1,4 @@
+package retos;
 // Pida un número por teclado hasta que éste sea positivo
 // Muestra los primeros 20 números sucesivos a dicho número.
 

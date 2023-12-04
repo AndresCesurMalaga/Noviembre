@@ -1,3 +1,4 @@
+package retos;
 // Pida al usuario 3 números y un orden de ordenamiento, que puede ser ascendente o descendente
 // Según el orden indicado se mostrarán en pantalla dichos números.
 
