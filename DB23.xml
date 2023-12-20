@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.2.1
+- https://www.phpmyadmin.net
+-
+- Servidor: 127.0.0.1
+- Tiempo de generación: 20-12-2023 a las 12:20:53
+- Versión del servidor: 10.4.32-MariaDB
+- Versión de PHP: 8.0.30
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="examen_db23" collation="utf8mb4_general_ci" charset="utf8mb4">
+            <pma:table name="alumno">
+                CREATE TABLE `alumno` (
+                  `nombre` varchar(30) DEFAULT NULL,
+                  `edad` int(11) DEFAULT NULL,
+                  `nota_media` int(11) DEFAULT NULL,
+                  `ciclo` int(11) DEFAULT NULL,
+                  `id_alum` int(11) NOT NULL,
+                  PRIMARY KEY (`id_alum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="asignatura">
+                CREATE TABLE `asignatura` (
+                  `cod_asig` int(11) NOT NULL,
+                  `curso` int(11) NOT NULL,
+                  `asignatura` varchar(30) NOT NULL,
+                  `prueba` int(11) DEFAULT NULL,
+                  PRIMARY KEY (`cod_asig`),
+                  CONSTRAINT `asignatura_ibfk_1` FOREIGN KEY (`prueba`) REFERENCES `alumno` (`id_alum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+            <pma:table name="centro">
+                CREATE TABLE `centro` (
+                  `id_alum` int(11) NOT NULL,
+                  `cod_asig` int(11) NOT NULL,
+                  `centro` varchar(30) NOT NULL,
+                  `ciudad` varchar(30) NOT NULL,
+                  PRIMARY KEY (`id_alum`,`cod_asig`,`centro`,`ciudad`),
+                  KEY `fk_cod_asig` (`cod_asig`),
+                  CONSTRAINT `fk_alum` FOREIGN KEY (`id_alum`) REFERENCES `alumno` (`id_alum`),
+                  CONSTRAINT `fk_cod_asig` FOREIGN KEY (`cod_asig`) REFERENCES `asignatura` (`cod_asig`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de datos: 'examen_db23'
+    -->
+    <database name="examen_db23">
+        <!-- Tabla alumno -->
+        <!-- Tabla asignatura -->
+        <!-- Tabla centro -->
+    </database>
+</pma_xml_export>
