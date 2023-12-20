@@ -1,0 +1,19 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"examen_db23"},
+{"type":"table","name":"alumno","database":"examen_db23","data":
+[
+
+]
+}
+,{"type":"table","name":"asignatura","database":"examen_db23","data":
+[
+
+]
+}
+,{"type":"table","name":"centro","database":"examen_db23","data":
+[
+
+]
+}
+]
